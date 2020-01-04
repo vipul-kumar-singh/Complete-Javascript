@@ -1,3 +1,8 @@
+/**********************************************************************************************
+ * Variable and Data Types
+ */
+
+ /*
 //String datatype
 var firstName = 'John';
 var lastName = 'Smith';
@@ -23,6 +28,29 @@ console.log(job);
 //and these two are the only special characters allowed in variable name
 var $3years = 3;
 var _isAdult = false;
-
+*/
 
 //resersed keywords like 'function', 'delete', 'var' are also not allowed
+
+
+
+/**********************************************************************************************
+ * Variable Mutation and Type Coercion
+ */
+
+ var firstName = 'John'
+ var age = 28;
+
+ //Type Coercion
+ console.log(firstName + ' '+ age); //javascript automatically converted number to string
+
+ var job, isMarried;// can define two different types of variables together
+ job = 'Teacher';
+ isMarried = false;
+ console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+ 
+
+ //Variable Mutation
+ age = 'twenty eight';
+ job = 'driver';
+ console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
