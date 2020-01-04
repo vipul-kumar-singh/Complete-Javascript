@@ -54,3 +54,9 @@ var _isAdult = false;
  age = 'twenty eight';
  job = 'driver';
  console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+ alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+ var middleName = prompt("What is his middle name?");
+ var lastName = prompt("What is his last name?", _default='Smith');
+ console.log(firstName + ' '+ middleName +' ' + lastName);
