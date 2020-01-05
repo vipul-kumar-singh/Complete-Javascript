@@ -70,9 +70,12 @@ var _isAdult = false;
  */
 
 var year, yearJohn, yearMark;
-now = 2010;
-ageJohn = 28;
-ageMark = 33;
+
+//It's possible to define a variable without any preceding statements (var).
+//In such a case, the variable will be global, which means it could be accessed from anywhere in the code.
+now = 2010; 
+ageJohn = 28; 
+ageMark = 33; 
 
 
 //Math operators
@@ -98,4 +101,3 @@ console.log(typeof ageJohn);
 console.log(typeof 'Mark is older than John');
 var x;
 console.log(typeof x);
-
