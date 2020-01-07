@@ -108,7 +108,7 @@ console.log(typeof x);
 /**********************************************************************************************
  * Operator Precedence
  */
-
+/*
  var now = 2018;
  var yearJohn = 1989;
  var fullAge = 18;
@@ -137,3 +137,22 @@ console.log(typeof x);
  console.log(x);
  x--;
  console.log(x);  
+*/
+
+
+ /**********************************************************************************************
+ * If-Else statement
+ */
+
+
+
+var firstName = 'John';
+var age = 16;
+
+if (age < 13) {
+    console.log(firstName + ' is a boy.');
+} else if (age >= 13 && age < 20) {
+    console.log(firstName + ' is a teenager.');
+} else {
+    console.log(firstName + ' is a man.');
+}
