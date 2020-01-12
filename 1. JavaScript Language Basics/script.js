@@ -145,7 +145,7 @@ console.log(typeof x);
  */
 
 
-
+/*
 var firstName = 'John';
 var age = 16;
 
@@ -156,3 +156,15 @@ if (age < 13) {
 } else {
     console.log(firstName + ' is a man.');
 }
+*/
+
+
+/**********************************************************************************************
+* The Ternary Operator
+*/
+
+var firstName = 'John';
+var age = 16;
+
+
+console.log('John' + (age >= 18 ? ' drinks beer.' : ' drinks juice.'));
