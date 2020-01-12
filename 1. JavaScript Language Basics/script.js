@@ -174,7 +174,7 @@ console.log('John' + (age >= 18 ? ' drinks beer.' : ' drinks juice.'));
 /**********************************************************************************************
 * Switch statement
 */
-
+/*
 var firstName = 'John';
 var age = 16;
 var job = 'driver';
@@ -209,4 +209,35 @@ switch(true){
     default :
         console.log(firstName,'is a man.');
         
+}
+*/
+
+
+/**********************************************************************************************
+* Truthy & Falsy values and equality operators
+*/
+
+// falsy values : undefined, null, 0, '', NaN
+// truthy values : NOT falsy values
+
+var height;
+height = 23;
+
+if (height || height === 0) {
+    console.log('Varable is defined');    
+} else{
+    console.log('Variable has NOT been defined');
+}
+
+
+//Equality operators
+if (height == '23') {
+    console.log('The == operator does type coercion');
+}
+
+//Strict equality operator
+if (height === '23') {
+    console.log('The == operator does type coercion');
+} else{
+    console.log('The == operator does not type coercion'); //Correct
 }
