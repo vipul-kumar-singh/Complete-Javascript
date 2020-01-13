@@ -219,7 +219,7 @@ switch(true){
 
 // falsy values : undefined, null, 0, '', NaN
 // truthy values : NOT falsy values
-
+/*
 var height;
 height = 23;
 
@@ -241,3 +241,34 @@ if (height === '23') {
 } else{
     console.log('The == operator does not type coercion'); //Correct
 }
+*/
+
+
+/**********************************************************************************************
+* Functions
+*/
+
+function calculateAge(birthYear){
+    return 2020 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
+
+function yearsUntilRetirement(birthYear, firstName){
+    var age = calculateAge(birthYear);
+    var retirement = 60 - age;
+
+    if (retirement > 0) {
+        console.log(firstName,'retires in',retirement,'years.');        
+    } else {
+        console.log(firstName,'is already retired.');        
+    }
+    
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
