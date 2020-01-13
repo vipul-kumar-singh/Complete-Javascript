@@ -278,7 +278,7 @@ yearsUntilRetirement(1969, 'Jane');
 /**********************************************************************************************
 * Functions Statements and Expressions
 */
-
+/*
 //Function Declaration
 // function whatDoYouDo(job, firstName) {}
 
@@ -299,3 +299,39 @@ var whatDoYouDo = function(job, firstName){
 console.log(whatDoYouDo('teacher','John'));
 console.log(whatDoYouDo('designer','Jane'));
 console.log(whatDoYouDo('retired','Mike'));
+*/
+
+
+/**********************************************************************************************
+* Arrays
+*/
+
+//Initialize new Array
+var names = ['Mike','Dustin','Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+console.log(names);
+console.log(names.length);
+
+//Mutate Array data
+names[2] = 'Will';
+console.log(names);
+
+names[names.length] = 'Lucas'
+console.log(names);
+
+//Different Data Types
+var john = ['John', 'Smith', 1990, 'teacher']
+
+john.push('blue');//Add element to end of array
+john.unshift('Mr.');//Add element to start of array
+console.log(john);
+
+john.pop();//Remove last element
+john.shift();//Remove first element
+console.log(john);
+
+console.log(john.indexOf('Smith'));
+console.log(john.indexOf('323'));
+
