@@ -305,7 +305,7 @@ console.log(whatDoYouDo('retired','Mike'));
 /**********************************************************************************************
 * Arrays
 */
-
+/*
 //Initialize new Array
 var names = ['Mike','Dustin','Jane'];
 var years = new Array(1990, 1969, 1948);
@@ -334,4 +334,65 @@ console.log(john);
 
 console.log(john.indexOf('Smith'));
 console.log(john.indexOf('323'));
+*/
 
+
+
+/**********************************************************************************************
+* Objects And Properties
+*/
+/*
+//Object Literal
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+}
+
+console.log(john);
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+//new Object syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane['lastname'] = 'Smith';
+jane.birthYear = 1985;
+console.log(jane);
+*/
+
+
+
+/**********************************************************************************************
+* Objects And Methods
+*/
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+
+    calcAge: function(birthyear){
+        return 2020 - birthyear;
+    },
+
+    getMyAge: function(){
+        this.age =  this.calcAge(this.birthYear);
+    }
+};
+
+console.log(john.calcAge(1985));
+john.getMyAge();
+console.log(john);
