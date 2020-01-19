@@ -375,7 +375,7 @@ console.log(jane);
 /**********************************************************************************************
 * Objects And Methods
 */
-
+/*
 var john = {
     firstName: 'John',
     lastName: 'Smith',
@@ -396,3 +396,40 @@ var john = {
 console.log(john.calcAge(1985));
 john.getMyAge();
 console.log(john);
+*/
+
+
+/**********************************************************************************************
+* Loops and Iteration
+*/
+
+//For loop
+for (var i = 0 ; i < 10 ; i++){
+    console.log(i);
+}
+
+var john = ['John', 'Smith', 1990, 'teacher', false, 'blue']
+
+for(var i = 0; i< john.length ; i++)
+    console.log(john[i]);    
+
+
+//while loop
+var j=0;
+while (i<john.length) {
+    console.log(john[i]);
+}
+
+
+// continue and break statements
+for(var k = 0; k< john.length; k++){
+    if (typeof john[k] !== 'string')
+        continue;
+    console.log(john[k]);
+}
+
+for(var l = 0; l< john.length; l++){
+    if (typeof john[l] !== 'string')
+        break;
+    console.log(john[l]);
+}
