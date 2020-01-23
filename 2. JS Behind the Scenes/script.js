@@ -33,7 +33,7 @@ console.log(age);
 /********************************
 * Lecture: Scoping
 */
-
+/*
 // First scoping example
 
 
@@ -73,18 +73,45 @@ function third() {
     var d = 'John';
     console.log(a + b + c + d);
 }
+*/
 
 
 
+/********************************
+* Lecture: The this keyword
+*/
 
-///////////////////////////////////////
-// Lecture: The this keyword
+// console.log(this); //window information
+
+calculateAge(1985)
+
+function calculateAge(year){
+    console.log(2020-year);
+    console.log(this);
+}
 
 
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    calculateAge: function () {
+        console.log(this); //information about john object
+        console.log(2016 - this.yearOfBirth);
+
+        // function innerFuntion() {
+        //     console.log(this); //Window Object
+        // }
+        // innerFuntion();//when a regular function calls happens, then the default object is the window object
+    }
+}
+
+john.calculateAge();
 
 
+var mike = {
+    name: 'mike',
+    yearOfBirth:1956
+};
 
-
-
-
-
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
