@@ -8,21 +8,38 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
 
-dice = Math.floor(Math.random() * 6) + 1;
 
 //HTML MANIPULATION
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'; //To add some HTML from here
-document.querySelector('#current-' + activePlayer).textContent = dice; //To change the text of HTML element (Setter)
+//document.querySelector('#current-' + activePlayer).textContent = dice; //To change the text of HTML element (Setter)
 
-var x = document.querySelector('#score-0').textContent; //To read the value of HTML element (Getter)
-console.log(x);
+//var x = document.querySelector('#score-0').textContent; //To read the value of HTML element (Getter)
+//console.log(x);
+
+document.getElementById('score-0').textContent = 0; //To read the HTML elemt by Id
+document.getElementById('score-1').textContent = 0;
+document.getElementById('current-0').textContent = 0;
+document.getElementById('current-1').textContent = 0;
 
 //CSS MANIPULATION
 document.querySelector('.dice').style.display = 'none';
 
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    
+    //1. Random Number
+    var dice = Math.floor(Math.random() * 6) + 1;
+
+    //2. Display the result
+    var diceDOM = document.querySelector('.dice');
+    diceDOM.style.display = 'block';
+    diceDOM.src = 'dice-' + dice + '.png';
+
+    //3. Update the round score only if the round score is NOT 1, otherwise set round score to zero
+
+});
